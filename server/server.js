@@ -14,8 +14,8 @@ connectDB();
 
 const app = express();
 const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:3001",
+  "https://wisetech-backend.onrender.com",
+  "https://wisetech-backend.onrender.com",
 ];
 
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));

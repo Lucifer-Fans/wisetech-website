@@ -22,7 +22,7 @@ export default function Inbox() {
   const location = useLocation();
 
   const fetchData = async () => {
-    let url = "http://localhost:5000/api/enquiries";
+    let url = "https://wisetech-backend.onrender.com/api/enquiries";
     if (filter === "starred") url += "?starred=true";
     else if (filter === "unread") url += "?viewed=false";
 
@@ -51,7 +51,7 @@ export default function Inbox() {
     if (!result.isConfirmed) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/enquiries/${id}`);
+      await axios.delete(`https://wisetech-backend.onrender.com/api/enquiries/${id}`);
 
       Swal.fire("Deleted!", "Enquiry has been deleted.", "success");
       fetchData();
@@ -61,7 +61,7 @@ export default function Inbox() {
   };
 
   const handleView = async (id) => {
-    await axios.put(`http://localhost:5000/api/enquiries/${id}/view`);
+    await axios.put(`https://wisetech-backend.onrender.com/api/enquiries/${id}/view`);
 
     navigate(`/enquiry/${id}`, {
       state: {
@@ -78,7 +78,7 @@ export default function Inbox() {
   };
 
   const handleStarToggle = async (id, currentStatus) => {
-    await axios.put(`http://localhost:5000/api/enquiries/${id}/star`, {
+    await axios.put(`https://wisetech-backend.onrender.com/api/enquiries/${id}/star`, {
       starred: !currentStatus,
     });
     fetchData();
@@ -100,7 +100,7 @@ export default function Inbox() {
     try {
       await Promise.all(
         selectedIds.map((id) =>
-          axios.delete(`http://localhost:5000/api/enquiries/${id}`)
+          axios.delete(`https://wisetech-backend.onrender.com/api/enquiries/${id}`)
         )
       );
 
@@ -115,7 +115,7 @@ export default function Inbox() {
   const handleBulkView = async () => {
     await Promise.all(
       selectedIds.map((id) =>
-        axios.put(`http://localhost:5000/api/enquiries/${id}/view`)
+        axios.put(`https://wisetech-backend.onrender.com/api/enquiries/${id}/view`)
       )
     );
     setSelectedIds([]);

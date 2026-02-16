@@ -3,7 +3,7 @@ import api from "../api/axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Trophy, Plane, PartyPopper, GraduationCap } from "lucide-react";
 
-const BASE_URL = import.meta.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL = import.meta.env.REACT_APP_API_URL || "https://wisetech-backend.onrender.com";
 
 /* CATEGORY CONFIG */
 const categories = [

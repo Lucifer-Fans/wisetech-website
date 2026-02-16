@@ -20,7 +20,7 @@ export default function EnquiryDetail() {
   // Fetch current enquiry
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/enquiries/${id}`)
+      .get(`https://wisetech-backend.onrender.com/api/enquiries/${id}`)
       .then((res) => setEnquiry(res.data));
   }, [id]);
 

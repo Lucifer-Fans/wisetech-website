@@ -26,7 +26,7 @@ export default function News() {
   const MIN_ZOOM = 1;
   const MAX_ZOOM = 5;
 
-  const BASE_URL = import.meta.env.REACT_APP_API_URL || "http://localhost:5000";
+  const BASE_URL = import.meta.env.REACT_APP_API_URL || "https://wisetech-backend.onrender.com";
 
   useEffect(() => {
     const fetchNews = async () => {

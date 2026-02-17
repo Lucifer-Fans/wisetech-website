@@ -15,6 +15,7 @@ connectDB();
 const app = express();
 const allowedOrigins = [
   "https://wisetech-mep.com",
+  "https://www.wisetech-mep.com",
   "https://admin.wisetech-mep.com",
 ];
 

@@ -2,14 +2,19 @@ import TeamFun from "../models/TeamFun.js";
 
 /* ================= CREATE ================= */
 export const createTeamFun = async (req, res) => {
-  const images = req.files?.map((f) => f.path) || [];
+  try {
+    const images = req.files?.map((file) => file.path) || [];
+    // CloudinaryStorage automatically gives hosted URL in file.path
 
-  const team = await TeamFun.create({
-    ...req.body,
-    images
-  });
+    const team = await TeamFun.create({
+      ...req.body,
+      images
+    });
 
-  res.status(201).json(team);
+    res.status(201).json(team);
+  } catch (error) {
+    res.status(500).json({ message: "Upload failed", error: error.message });
+  }
 };
 
 /* ================= DELETE ================= */

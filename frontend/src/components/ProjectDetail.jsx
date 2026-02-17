@@ -321,7 +321,7 @@ export default function ProjectDetail() {
 
       {/* ================= WHATSAPP ================= */}
       <a
-        href="https://wa.me/9987221079?text=Hello%20WISETECH%20MEP%20CONSULTANT%20PVT.%20LTD.%2C%20I%E2%80%99m%20interested%20in%20your%20work%20on%20the%20Homepage%20at%20https%3A%2F%2Fwww.wisetech-mep.com%2F.%20Could%20you%20please%20share%20more%20details%20on%20how%20I%20might%20engage%20your%20services%3F"
+        href="https://wa.me/9987221079?text=Hello%20WISETECH%20MEP%20CONSULTANT%20PVT.%20LTD.%2C%20I%E2%80%99m%20interested%20in%20your%20work%20on%20Our%20Projects%20at%20https%3A%2F%2Fwww.wisetech-mep.com%2F.%20Could%20you%20please%20share%20more%20details%20on%20how%20I%20engage%20your%20services%3F"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-16 left-3 bg-green-500 p-4 rounded-full hover:scale-110 transition z-50"

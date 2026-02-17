@@ -1,5 +1,4 @@
 import express from "express";
-import multer from "multer";
 import {
   createTeamFun,
   deleteTeamFun,
@@ -7,17 +6,16 @@ import {
   adminTeamFun
 } from "../controllers/team.controller.js";
 import { adminAuth } from "../middleware/auth.middleware.js";
+import { uploadTeam } from "../middleware/upload.middleware.js"; // ✅ USE CLOUDINARY MIDDLEWARE
 
 const router = express.Router();
-
-const upload = multer({ dest: "uploads/team" });
 
 /* FRONTEND */
 router.get("/", getTeamFun);
 
 /* ADMIN */
 router.get("/admin/list", adminAuth, adminTeamFun);
-router.post("/", adminAuth, upload.array("images"), createTeamFun);
+router.post("/", adminAuth, uploadTeam.array("images"), createTeamFun); // ✅ Cloudinary upload
 router.delete("/:id", adminAuth, deleteTeamFun);
 
 export default router;

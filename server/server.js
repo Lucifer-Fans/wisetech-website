@@ -7,7 +7,6 @@ import authRoutes from "./routes/auth.routes.js";
 import projectRoutes from "./routes/project.routes.js";
 import newsRoutes from "./routes/news.routes.js";
 import teamRoutes from "./routes/team.routes.js";
-import path from "path";
 
 dotenv.config();
 connectDB();
@@ -19,7 +18,6 @@ const allowedOrigins = [
   "https://admin.wisetech-mep.com",
 ];
 
-app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 app.use(
   cors({
     origin: function (origin, callback) {

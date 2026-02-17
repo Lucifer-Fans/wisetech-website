@@ -30,7 +30,7 @@ export default function TeamFun() {
       item.images.map((img, index) => ({
         id: `${item._id}-${index}`,
         title: item.title,
-        image: `${BASE_URL}/${img}`,
+        image: img,
       }))
     );
 

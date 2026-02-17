@@ -9,7 +9,7 @@ import {
   adminProjects
 } from "../controllers/project.controller.js";
 import { adminAuth } from "../middleware/auth.middleware.js";
-import upload from "../middleware/upload.middleware.js";
+import { uploadProject } from "../middleware/upload.middleware.js";
 
 const router = express.Router();
 
@@ -26,7 +26,7 @@ router.get("/admin/list", adminAuth, adminProjects);
 router.post(
   "/",
   adminAuth,
-  upload.fields([
+  uploadProject.fields([
     { name: "coverimg", maxCount: 1 },
     { name: "images", maxCount: 20 }
   ]),
@@ -36,7 +36,7 @@ router.post(
 router.put(
   "/:id",
   adminAuth,
-  upload.fields([
+  uploadProject.fields([
     { name: "coverimg", maxCount: 1 },
     { name: "images", maxCount: 20 }
   ]),

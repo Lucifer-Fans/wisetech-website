@@ -26,8 +26,6 @@ export default function News() {
   const MIN_ZOOM = 1;
   const MAX_ZOOM = 5;
 
-  const BASE_URL = import.meta.env.REACT_APP_API_URL || "https://wisetech-backend.onrender.com";
-
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -137,12 +135,12 @@ export default function News() {
                 {/* IMAGE */}
                 <div className="relative h-56 overflow-hidden">
                   <img
-                    src={`${BASE_URL}/${article.image}`}
+                    src={article.image}
                     alt={article.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedImage(`${BASE_URL}/${article.image}`);
+                      setSelectedImage(article.image);
                       resetZoom();
                     }}
                   />

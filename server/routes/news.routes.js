@@ -1,5 +1,4 @@
 import express from "express";
-import multer from "multer";
 import {
   createNews,
   deleteNews,
@@ -7,17 +6,16 @@ import {
   adminNews
 } from "../controllers/news.controller.js";
 import { adminAuth } from "../middleware/auth.middleware.js";
+import { uploadNews } from "../middleware/upload.middleware.js"; // ✅ Use Cloudinary
 
 const router = express.Router();
-
-const upload = multer({ dest: "uploads/news" });
 
 /* FRONTEND */
 router.get("/", getNews);
 
 /* ADMIN */
 router.get("/admin/list", adminAuth, adminNews);
-router.post("/", adminAuth, upload.single("image"), createNews);
+router.post("/", adminAuth, uploadNews.single("image"), createNews); // ✅ Cloudinary upload
 router.delete("/:id", adminAuth, deleteNews);
 
 export default router;

@@ -2,15 +2,21 @@ import News from "../models/News.js";
 
 /* ================= CREATE ================= */
 export const createNews = async (req, res) => {
-  const image = req.file ? req.file.path : "";
+  try {
+    const image = req.file ? req.file.path : ""; 
+    // CloudinaryStorage gives hosted URL in file.path
 
-  const news = await News.create({
-    ...req.body,
-    image
-  });
+    const news = await News.create({
+      ...req.body,
+      image
+    });
 
-  res.status(201).json(news);
+    res.status(201).json(news);
+  } catch (error) {
+    res.status(500).json({ message: "Upload failed", error: error.message });
+  }
 };
+
 
 /* ================= DELETE ================= */
 export const deleteNews = async (req, res) => {

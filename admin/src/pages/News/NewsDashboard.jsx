@@ -15,7 +15,7 @@ export default function NewsDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const BASE_URL = import.meta.env.VITE_API_URL || "https://wisetech-backend.onrender.com";
+  const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   const navigate = useNavigate();
 
@@ -132,7 +132,7 @@ export default function NewsDashboard() {
               >
                 <td className="px-4 py-1 flex items-center justify-center">
                   <img
-                    src={`${BASE_URL}/${n.image}`}
+                    src={n.image}
                     className="h-full w-14 object-cover rounded-lg"
                     alt={n.title}
                   />

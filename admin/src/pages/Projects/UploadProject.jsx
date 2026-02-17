@@ -95,7 +95,7 @@ export default function UploadProject() {
 
     // STEP 1 : DETAILS
     if (step === 1) {
-      const required = ["service", "architech", "client", "area", "location", "status"];
+      const required = ["service", "architect", "client", "area", "location", "status"];
       const missing = required.some((key) => !data[key]);
 
       if (missing) {
@@ -306,7 +306,7 @@ export default function UploadProject() {
               </h2>
 
               <div className="grid grid-cols-2 gap-4">
-                {["service", "architech", "client", "area", "location"].map((f) => (
+                {["service", "architect", "client", "area", "location"].map((f) => (
                   <div key={f} className="flex flex-col gap-1">
                     <label className="text-[16px] font-medium text-black capitalize">
                       {f}
@@ -477,7 +477,7 @@ export default function UploadProject() {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[16px] text-black">
-                    {["service", "architech", "client", "area", "location", "status"].map(
+                    {["service", "architect", "client", "area", "location", "status"].map(
                       (key) => (
                         <div key={key}>
                           <span className="font-medium capitalize">{key}:</span>{" "}

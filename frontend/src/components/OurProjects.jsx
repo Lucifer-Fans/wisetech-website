@@ -71,7 +71,7 @@ const categories = rawCategories.map((cat) => ({
 }));
 
 export default function OurProjects() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [showAll, setShowAll] = useState(false);
   const ref = useRef(null);
 
@@ -100,7 +100,7 @@ export default function OurProjects() {
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([entry]) => entry.isIntersecting && setVisible(true),
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) obs.observe(ref.current);

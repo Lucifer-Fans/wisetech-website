@@ -132,7 +132,7 @@ export default function TeamDashboard() {
               >
                 <td className="px-4 py-1 flex items-center justify-center">
                   <img
-                    src={`${BASE_URL}/${t.images?.[0]}`}
+                    src={t.images?.[0]}
                     className="h-full w-14 object-cover rounded-lg"
                     alt={t.title}
                   />

@@ -15,7 +15,7 @@ import electricalaudit from "../assets/categories/electricalaudit.png";
 import moefcrz from "../assets/categories/moefcrz.png";
 import highrise from "../assets/categories/highrise.jpg";
 import commercialbldg from "../assets/categories/commercialbldg.png";
-import townshipplanning from "../assets/categories/townshipplanning.png";
+import townshipplanning from "../assets/categories/townshipplanning.jpg";
 import residentialbldg from "../assets/categories/residentialbldg.jpg";
 import brd from "../assets/categories/brd.png";
 import hotelandrestaurant from "../assets/categories/hotelandrestaurant.jpg";

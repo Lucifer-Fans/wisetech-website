@@ -175,7 +175,7 @@ export default function Home() {
         href="https://wa.me/9987221079?text=Hello%20WISETECH%20MEP%20CONSULTANT%20PVT.%20LTD.%2C%20I%E2%80%99m%20interested%20in%20your%20work%20on%20Our%20Projects%20at%20https%3A%2F%2Fwww.wisetech-mep.com%2F.%20Could%20you%20please%20share%20more%20details%20on%20how%20I%20engage%20your%20services%3F"
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-16 left-3 bg-green-500 p-4 rounded-full hover:scale-110 transition z-50"
+        className="fixed bottom-16 right-3 bg-green-500 p-4 rounded-full hover:scale-110 transition z-50"
       >
         <FaWhatsapp className="text-white text-2xl" />
       </a>
@@ -183,7 +183,7 @@ export default function Home() {
       {/* ================= SCROLL TOP ================= */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-16 right-3 text-white p-4 bg-blue hover:bg-red hover:scale-110
+        className={`fixed bottom-16 left-3 text-white p-4 bg-blue hover:bg-red hover:scale-110
         rounded-full transition z-50 ${showScrollTop ? "opacity-100" : "opacity-0"}`}
       >
         <FaArrowUp />

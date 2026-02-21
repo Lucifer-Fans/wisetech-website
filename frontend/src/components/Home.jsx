@@ -17,7 +17,6 @@ import "swiper/css/pagination";
 // Slider Images
 import slider1 from "../assets/slider/slider1.jpg";
 import slider2 from "../assets/slider/slider2.jpg";
-import slider3 from "../assets/slider/slider3.jpg";
 import slider4 from "../assets/slider/slider4.jpg";
 import slider5 from "../assets/slider/slider5.jpg";
 import slider6 from "../assets/slider/slider6.jpg";
@@ -25,13 +24,12 @@ import slider7 from "../assets/slider/slider7.jpg";
 import slider8 from "../assets/slider/slider8.jpg";
 import slider9 from "../assets/slider/slider9.jpg";
 import slider10 from "../assets/slider/slider10.jpeg";
-import slider11 from "../assets/slider/slider11.jpg";
 import slider12 from "../assets/slider/slider12.png";
 import slider13 from "../assets/slider/slider13.jpg";
 import slider14 from "../assets/slider/slider14.jpg";
 
 /* ================= SLIDER DATA ================= */
-const sliderImages = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12, slider13, slider14];
+const sliderImages = [slider1, slider2, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider12, slider13, slider14];
 
 const slides = sliderImages.map((img, index) => ({
   id: index,

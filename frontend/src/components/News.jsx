@@ -145,7 +145,7 @@ export default function News() {
                     }}
                   />
                   {article.category && (
-                    <span className="absolute top-4 left-4 bg-red text-white px-3 py-1 rounded-full text-[14px] font-bold">
+                    <span className="absolute top-4 left-4 bg-red text-white px-3 py-1 rounded-full text-[14px] font-bold uppercase">
                       {article.category}
                     </span>
                   )}

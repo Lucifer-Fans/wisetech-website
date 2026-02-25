@@ -127,7 +127,7 @@ export default function TeamFun() {
           src={m.image}
           alt=""
           loading="lazy"
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105 rounded-xl"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 rounded-xl"
         />
       </motion.div>
     ))}

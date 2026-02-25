@@ -91,7 +91,7 @@ export default function TeamFun() {
         </div>
 
         {/* COLLAGE */}
-        <div className="relative rounded-3xl border border-gray-300 bg-white p-6">
+        {/* <div className="relative rounded-3xl border border-gray-300 bg-white p-6">
           <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-3 space-y-3">
             {visibleMoments.map((m, index) => (
               <motion.div
@@ -111,7 +111,28 @@ export default function TeamFun() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
+        <div className="relative rounded-3xl border border-gray-300 bg-white p-6">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    {visibleMoments.map((m, index) => (
+      <motion.div
+        key={m.id}
+        onClick={() => setSelectedIndex(index)}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+        className="group relative overflow-hidden rounded-xl cursor-pointer"
+      >
+        <img
+          src={m.image}
+          alt=""
+          loading="lazy"
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105 rounded-xl"
+        />
+      </motion.div>
+    ))}
+  </div>
+</div>
       </div>
 
       {/* LIGHTBOX */}

@@ -112,7 +112,7 @@ export default function TeamFun() {
             ))}
           </div>
         </div> */}
-        <div className="relative rounded-3xl border border-gray-300 bg-white p-6">
+        <div className="relative bg-gray2 p-6">
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
     {visibleMoments.map((m, index) => (
       <motion.div

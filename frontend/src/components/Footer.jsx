@@ -32,7 +32,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/posts/wisetech-mep-consultants-private-limited_lokmat-times-swami-premier-league-in-dahisar-activity-7430936198077927424-4xaT?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAACOX7WIBtLmeKmmV3ZIt1ByNAIKbt3YUuvo&utm_campaign=whatsapp"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

@@ -116,8 +116,8 @@ Message: ${data.message}`;
             <div className="flex gap-2 text-black">
               <Phone className="text-red mt-0.5 flex-shrink-0" />
               <span className="text-[18px]">
-                <a href="tel:+919876543210" className="hover:text-blue">
-                  +91 98765 43210
+                <a href="tel:+919833994355" className="hover:text-blue">
+                  +91 98339 94355
                 </a>
               </span>
             </div>
@@ -125,8 +125,8 @@ Message: ${data.message}`;
             <div className="flex gap-2 text-black">
               <Mail className="text-blue mt-0.5 flex-shrink-0" />
               <span className="text-[18px]">
-                <a href="mailTo:info@mepcompany.com" className="hover:text-red">
-                  info@mepcompany.com
+                <a href="mailTo:me" className="hover:text-red">
+                  mobeen@wisetech-mep.com
                 </a>
               </span>
             </div>

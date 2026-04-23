@@ -36,7 +36,7 @@ export default function Contact() {
     e.preventDefault();
     if (!isFormValid || loading) return;
 
-    const whatsappMessage = `New Enquiry:
+    const whatsappMessage = `New Enquiry from Website:
 Name: ${data.name}
 Phone: ${data.phone}
 Email: ${data.email}
